@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: solid 2px blue; */
+    background-color: #333;
+    font-family: "Afacad Flux", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.welcome{
+    margin-top: 90px;
+    
+}
+
+
+        .containerr {
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: space-between; 
+            /* margin: 20px;  */
+            /* background-color: #333;  */
+        }
+        
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly; 
+        }
+        
+        .card {
+            border-radius: 10px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            /* background-color: #444;  */
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: scale(1.05);
+        }
+        
+        .card img {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            transition: transform 0.8s ease;
+        }
+        
+        .card img:hover {
+            transform: rotate(10deg); 
+        }
+        
+        .buy-button {
+            width: 170px;
+            height: 40px;
+            border: 2px solid #ccc;
+            color: white;
+            background-color: transparent; 
+            font-size: 17px;
+            border-radius: 5px;
+            cursor: pointer; 
+        }
+        
+        .buy-button:hover {
+            background-color: #e67e22;
+            color: white;
+        }
+        
+        .card .price {
+            /* margin: 2px; */
+            margin-bottom: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #e67e22;
+        }
+        
+        .card .name {
+            color: #ccc; 
+        }
+        
+
+
+
+
+
+
+
+
+
+
+
+/* header */
+/* header///////////////////////////////////////////////////////////////////////////////////////////// */
+ul {
+    list-style: none;
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.header {
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  right: 0;
+  z-index: 1000;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* تعديل لجعل العناصر في الوسط */
+  padding: 1rem 5%;
+  height: 80px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; /* توزيع الروابط بين الجانبين */
+  width: 100%; /* جعل عرض القائمة 100% */
+  margin-right: 100px;
+}
+
+.logo {
+  position: absolute;
+  top: 0.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo img {
+  width: 6rem;
+  height: auto;
+}
+
+.navbar {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    font-size: 1.4rem;
+    margin: 0 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #e0a800;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+}
+
+.icons {
+    color: white;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.icons:hover {
+    color: yellow;
+}
+
+#menu-btn {
+    display: none;
+}
+
+.space {
+    flex-grow: 1;
+}
+.spacee {
+    flex-grow: .4;
+}
+
+
+.logo img {
+    width: 6rem;
+    height: auto;
+}
+
+.fa-shopping-cart {
+    position: relative;
+}
+
+
+
+.cart-badge {
+
+    width: 25px;
+    position: absolute;
+    top: -14px;
+    right: -7px;
+    background-color: red;
+    color: white;
+    border-radius: 100px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icons {
+    position: relative;
+  }
+  
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* إخفاء القائمة في وضع الموبايل */
+        flex-direction: column; /* تغيير الاتجاه إلى عمودي */
+        position: absolute; /* لتكون فوق المحتوى */
+        background-color: #333; /* خلفية مماثلة للزر */
+        top: 80px; /* تحديد موضع القائمة */
+        left: 0;
+        right: 0;
+        padding: 1rem 0; /* إضافة حشوة للقائمة */
+    }
+
+    .navbar a {
+        margin: 1rem 0; /* مسافة بين الروابط */
+        padding: 0 20px; /* حشوة للروابط */
+        text-align: center; /* محاذاة النص إلى المنتصف */
+    }
+
+    #menu-btn {
+        color: white;
+        display: block; 
+        font-size: 2rem; 
+        cursor: pointer; 
+    }
+
+    .header {
+        justify-content: space-between; 
+    }
+
+    .space {
+        display: none; 
+    }
+
+    .fa-shopping-cart {
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 1269px) {
+    .navbar {
+    justify-content: space-between;
+     }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 1rem 2%;
+    }
+
+    .logo img {
+        width: 5rem;
+    }
+}
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+   .element {
+    opacity: 0; /* التأكد من أن العنصر مخفي عند البداية 
+    animation: fadeIn 1s ease-in forwards;
+    background-color: red;
+    width: 200px;
+    height: 200px;
+  }
+ 

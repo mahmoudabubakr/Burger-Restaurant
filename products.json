@@ -1,0 +1,41 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Classic Burger",
+      "price": 5.99,
+      "image": "https://png.pngtree.com/png-vector/20230922/ourmid/pngtree-burger-png-images-png-image_10146426.png"
+      
+    },
+    {
+      "id": 2,
+      "name": "CHEESE BURGER",
+      "price": 6.99,
+      "image": "https://png.pngtree.com/png-clipart/20230326/ourmid/pngtree-isolated-burger-on-transparent-background-png-image_6669724.png"
+    },
+    {
+      "id": 3,
+      "name": "BACON JACK",
+      "price": 7.99,
+      "image": "https://buffaloburger.com/_next/image?url=https%3A%2F%2Fbuffalonlineorderingprod.s3-accelerate.amazonaws.com%2Fmenu_items%2Fd845c9309b0d95d8c5d945b6b2552491.png&w=256&q=75"
+    },
+    {
+      "id": 4,
+      "name": "CAESAR SALAD",
+      "price": 280,
+      "image": "https://buffaloburger.com/_next/image?url=https%3A%2F%2Fbuffalonlineorderingprod.s3.eu-west-1.amazonaws.com%2Fmenu_items%2Fb969e186dcb089185c6d63d6774d02d6.png&w=256&q=75"
+    },
+    {
+      "id": 4,
+      "name": "SHITAKE MUSHRO",
+      "price": 4.99,
+      "image": "https://buffaloburger.com/_next/image?url=https%3A%2F%2Fbuffalonlineorderingprod.s3-accelerate.amazonaws.com%2Fmenu_items%2Fa76de047b66f2511962b600232c60769.png&w=256&q=75"
+    },
+    {
+      "id": 4,
+      "name": "CHICKEN FRIES",
+      "price": 79.99,
+      "image": "https://buffaloburger.com/_next/image?url=https%3A%2F%2Fbuffalonlineorderingprod.s3.eu-west-1.amazonaws.com%2Fmenu_items%2Fb666406ac37bf44f8b31849ec0ee48ed.png&w=256&q=75"
+    }
+  ]
+}

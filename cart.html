@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/index.css">
+  <!-- <link rel="stylesheet" href="styles/index.css"> -->
+  <title>Cart</title>
+
+  <style>
+    *{
+    box-sizing: border-box;
+    /* border: solid 1px blue; */
+    background-color: #333;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+    font-family: "Afacad Flux", sans-serif;
+    }
+    .cart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    margin-top: 10px;
+    /* margin-block-start: 50px; */
+    gap: 20px;
+}
+
+.cart-item {
+    /* border: 1px solid #ddd; */
+    /* padding: 10px; */
+    width: 300px;
+    text-align: center;
+    color: white;
+}
+
+
+.cart-item img {
+    max-width: 100%;
+    width: 200px;
+    height: 200px;
+    /* height: auto; */
+    transition: transform 0.8s ease;
+}
+.cart-item img:hover {
+            transform: rotate(10deg); 
+        }
+
+        .cart-item h3 {
+    font-size: 25px;
+}
+
+
+.remove-button {
+    margin-top: 10px;
+    background-color: transparent;
+    background-color: #ff4d4d; 
+    border: 1px white solid;
+    color: white; 
+    width: 150px;
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    font-size: 15px;
+}
+
+.remove-button:hover {
+    background-color: #ff1a1a; 
+}
+.con{
+    width: 100%;
+    /* background-color: #ff1a1a; */
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+.total{
+    /* width: 90%; */
+    height: 60px;
+    border-radius: 30px;
+    border:2px solid rgb(53, 184, 35);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.total:hover{
+    background-color:rgb(53, 184, 35) ;
+    color: #FFD700;
+}
+
+
+/* تنسيق النافذة المنبثقة */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* خلفية شفافة */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: none;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+
+    <header class="header">
+        <div id="menu-btn" class="fas fa-bars" aria-label="Menu"></div>
+        <nav class="navbar">
+            <span></span>
+            <span></span>
+            <span class="spacee"></span>
+          <a href="home.html" >Home</a>
+          <a href="home.html#menu">Menu</a>
+          <a href="home.html#about">About Us</a>
+          <span class="space"></span>
+          <a href="home.html#contact">Reviews</a>
+          <a href="home.html#team">Contact Us</a>
+          <a href="home.html#team">Our Team</a>
+        </nav>
+    
+        <a href="cart.html" class="fas fa-shopping-cart icons" aria-label="Shopping Cart" >
+      <span id="cart-count" class="cart-badge">0</span>
+    </a>
+    
+        <a href="home.html" class="logo"><img src="./img/logo.png" alt="Company Logo"></a>
+    </header>
+<!-- //////////////////////////////////////////////////////// -->
+  <center><h2 style="color: #FFD700; margin-top: 90px;">Your Cart</h2></center>
+  <section class="cart-container" id="cart-container"></section>
+<!-- 
+<div class="con"><button id="total-price" class="total" onclick="openModal()"></button></div>
+
+
+
+
+<!-- نافذة الدفع المنبثقة -->
+<!-- <div id="payment-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Payment Page</h2>
+      <p>Here you can add your payment details.</p>
+
+    </div>
+  </div> -->
+
+
+<!-- ظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظ -->
+
+  <div class="con">
+    <button id="total-price" class="total" onclick="openModal()">Total Price: $50</button>
+  </div>
+  
+  <!-- نافذة الدفع المنبثقة -->
+  <div id="payment-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Payment Details</h2>
+      
+      <form id="payment-form">
+        <div class="form-group">
+          <label for="payment-method">Payment Method</label>
+          <select id="payment-method" required>
+            <option value="visa">Visa</option>
+            <option value="cash">Cash</option>
+          </select>
+        </div>
+  
+        <div class="form-group" id="card-details">
+          <label for="name">Name on Card</label>
+          <input type="text" id="name" required>
+        </div>
+        
+        <div class="form-group" id="card-number-group">
+          <label for="card-number">Card Number</label>
+          <input type="text" id="card-number" required placeholder="XXXX-XXXX-XXXX-XXXX">
+        </div>
+        
+        <div class="form-group" id="expiry-group">
+          <label for="expiry">Expiry Date</label>
+          <input type="text" id="expiry" placeholder="MM/YY" required>
+        </div>
+        
+        <div class="form-group" id="cvv-group">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" required>
+        </div>
+  
+        <button type="submit" class="pay-btn">Confirm Payment</button>
+      </form>
+      
+      <div id="success-message" style="display:none;">
+        <h3>Payment Successful!</h3>
+        <p>Thank you for your payment.</p>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+  <script>
+    
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartContainer = document.getElementById('cart-container');
+    let totalPrice = 0; 
+
+    
+    cartItems.forEach((item, index) => {
+        const cartItem = document.createElement('div');
+        cartItem.className = 'cart-item';
+        cartItem.innerHTML = `
+            <img src="${item.image}" alt="${item.name}">
+            <h3>${item.name}</h3>
+            <p class="price">${item.price}</p>
+            <button class="remove-button" data-index="${index}">Remove</button>
+        `;
+        cartContainer.appendChild(cartItem);
+        
+        
+        const priceValue = parseFloat(item.price.replace('$', '')); 
+        totalPrice += priceValue; 
+    });
+
+    
+    document.getElementById('total-price').innerText = `Continue Payment: $${totalPrice.toFixed(2)}`;
+
+    
+    if (cartItems.length === 0) {
+        const emptyMessage = document.createElement('p');
+        emptyMessage.innerText = 'Your cart is empty. Add items to your cart!';
+        cartContainer.appendChild(emptyMessage);
+    }
+
+    cartContainer.addEventListener('click', function(e) {
+        if (e.target.classList.contains('remove-button')) {
+            const index = e.target.dataset.index; 
+            cartItems.splice(index, 1); 
+
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+
+
+            location.reload();
+        }
+    });
+
+
+
+    // payment///////////////////////
+    // لفتح النافذة المنبثقة
+function openModal() {
+  document.getElementById('payment-modal').style.display = 'flex';
+}
+
+// لإغلاق النافذة المنبثقة
+function closeModal() {
+  document.getElementById('payment-modal').style.display = 'none';
+}
+
+  </script>
+      <script src="https://kit.fontawesome.com/eacd7730a7.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+</html>
