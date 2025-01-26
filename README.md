@@ -20,10 +20,9 @@ The **Burger Restaurant** website provides a platform where customers can browse
 ---
 
 ## How to Use  
-### To Visit the Live Website:  
-Click here: [Burger Restaurant Website](https://mahmoudabubakr.github.io/Burger-Restaurant/)  
-
-### To Run the Project Locally:  
+1. Visit the Live Website: [Burger Restaurant Website](https://mahmoudabubakr.github.io/Burger-Restaurant/)
+2. Log in or Resgister
+3. Browse the website, read the details, then put your favorite meal in the shopping cart and feel free to reach out if you have any inquiries.
 
 
 ---
