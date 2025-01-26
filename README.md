@@ -21,7 +21,7 @@ The **Burger Restaurant** website provides a platform where customers can browse
 
 ## How to Use  
 ### To Visit the Live Website:  
-Click here: [Burger Restaurant Website](https://mahmoudabubakr.github.io/My-portfolio/)  
+Click here: [Burger Restaurant Website](https://mahmoudabubakr.github.io/Burger-Restaurant/)  
 
 ### To Run the Project Locally:  
 
