@@ -31,12 +31,20 @@ Click here: [Burger Restaurant Website](https://mahmoudabubakr.github.io/My-port
 ## Technologies Used  
 - **HTML5**  
 - **CSS3**  
-- **JavaScript (ES6+)**  
+- **JavaScript**  
 - **Responsive Web Design**
 
 ---  
+
 ## Video Demo  
 ### Watch a Demo of the Website
-[Watch Video](https://drive.google.com/file/d/1L1MJshpCVciQ3iBcL5f6u8itbNoNsWvu/preview)
+Click here: [Watch Video](https://drive.google.com/file/d/1L1MJshpCVciQ3iBcL5f6u8itbNoNsWvu/preview)
 
 ---
+
+## Contact  
+If you’re interested in collaborating or have any questions, feel free to reach out:  
+- **Email:** mahmoudabubakr11@outlook.com  
+- **LinkedIn:** https://www.linkedin.com/in/mahmoud-ali-abubakr/  
+- **GitHub:** https://github.com/mahmoudabubakr?tab=repositories
+- **WhatsApp:** https://api.whatsapp.com/send/?phone=201000350520&text&type=phone_number&app_absent=0
