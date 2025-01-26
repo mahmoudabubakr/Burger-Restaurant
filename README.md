@@ -48,3 +48,9 @@ If you’re interested in collaborating or have any questions, feel free to reac
 - **LinkedIn:** https://www.linkedin.com/in/mahmoud-ali-abubakr/  
 - **GitHub:** https://github.com/mahmoudabubakr?tab=repositories
 - **WhatsApp:** https://api.whatsapp.com/send/?phone=201000350520&text&type=phone_number&app_absent=0
+
+---
+
+## Acknowledgments   
+- A nod to everyone who worked with me to build the website and contributed ideas or feedback to improve the website.  
+
