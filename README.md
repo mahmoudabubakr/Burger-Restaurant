@@ -24,13 +24,7 @@ The **Burger Restaurant** website provides a platform where customers can browse
 Click here: [Burger Restaurant Website](https://mahmoudabubakr.github.io/My-portfolio/)  
 
 ### To Run the Project Locally:  
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/your-username/burger-restaurant.git
-cd burger-restaurant
-npm install
-npm start
-http://localhost:3000
+
 
 ---
 
@@ -43,7 +37,6 @@ http://localhost:3000
 ---  
 ## Video Demo  
 ### Watch a Demo of the Website
-<iframe src="https://youtu.be/evz1LqEomTE?si=NjoNICCIK3O19uld" width="640" height="480" allow="autoplay"></iframe>
-
+[Watch Video](https://drive.google.com/file/d/1L1MJshpCVciQ3iBcL5f6u8itbNoNsWvu/preview)
 
 ---
